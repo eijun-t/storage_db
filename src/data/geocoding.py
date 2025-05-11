@@ -248,9 +248,9 @@ def main():
                             st.components.v1.html(map_html, height=600)
                     else:
                         st.error("入力された住所が見つかりませんでした。")
-    except Exception as e:
+                except Exception as e:
                     st.error(f"住所検索中にエラーが発生しました: {str(e)}")
-        
+    
     else:  # 地図で選択
         st.write("地図上でクリックして場所を選択してください。")
         
@@ -372,7 +372,7 @@ def show_login_page():
                             st.rerun()
                         else:
                             st.error("ログインに失敗しました。メールアドレスとパスワードを確認してください。")
-    except Exception as e:
+                    except Exception as e:
                         st.error(f"エラーが発生しました: {str(e)}")
             else:
                 st.warning("メールアドレスとパスワードを入力してください。")
@@ -401,7 +401,7 @@ def show_login_page():
                                 st.rerun()
                             else:
                                 st.error("アカウント作成に失敗しました。")
-    except Exception as e:
+                        except Exception as e:
                             st.error(f"エラーが発生しました: {str(e)}")
             else:
                 st.warning("すべての項目を入力してください。")
